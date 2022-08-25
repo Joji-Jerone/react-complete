@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Real Madrid</h1>
       </header>
     </div>
   );
 }
+
+export class Real_Madrid {
+  constructor ( player_name , jersey_number , country){
+    this.name = player_name;
+    this.jersey = jersey_number;
+    this.origin = country;
+  }
+
+ Bio(){
+  return "My favourite player is player" + this.name + "who wears " + this.jersey + "from the country" + this.origin ;
+ }
+
+}
+
+const myfav = new Real_Madrid ("Cristiano Ronaldo" , "7" , "Portugal")
+myfav.Bio();
+
+
+
 
 export default App;
